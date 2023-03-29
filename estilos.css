@@ -1,0 +1,132 @@
+:root{
+--primero: rgb(153, 81, 81);
+--segundo: #a86d6d;
+--tercero: rgb(206, 157, 137);
+--oscuro1: #aaaaaaa1;
+--oscuro2: #636363a1;
+--oscuro3: #222222;
+--oscuro4: #3d3d3d;
+
+}
+body {
+  background-color: var(--tercero);
+} 
+
+/* ENCABEZADO */
+
+header{
+    border: 1px black solid;
+    border-radius: 1em;
+    display: flex;
+    background-color: var(--primero);
+    width: 100%;
+    height:min-content;
+    justify-content: space-between;
+
+}
+
+header h1{
+    padding: .6em;
+}
+
+
+header button {
+    float: right;
+    background-color: var(--segundo);
+    margin-right: 1em;
+}
+
+/* INPUT DE NÚMERO DE TABLAS */
+
+form {
+    margin-bottom: 2em;
+}
+
+/* DIV CONTENEDOR DE TABLA */
+
+#ContenedorTablas {
+    display: none;
+}
+
+#ContenedorTablasActivo {
+    display: grid;
+    
+}
+
+/* DIV CONTENEDOR DE DATOS DE LA MUESTRA */
+
+#contenedorMuestra {
+    
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 2em;
+}
+#contenedorMuestra input {
+    width: 10em;
+}
+#operaciones {
+
+    margin-top: 2em;
+
+    border: 1px black solid;
+    border-radius: 3px;
+    width: max-content;
+    height: min-content;
+    display: grid;
+
+    grid-template-areas:'prom'
+                        's'                      
+                        's2'  
+}
+.operacion {
+  
+    border: 1px black solid;
+}
+.valor{
+    border: 1px solid black;
+}
+
+
+
+/* CLASES DE MODO OSCURO */
+
+
+
+.HeaderOscuro {
+    background-color: var(--oscuro3);
+    color: white;
+    border: 2px white solid;
+    border-radius: 1em;
+    width: 100%;
+}
+
+.Oscuro {
+    background-color: black;
+    color: white;
+    border: 2px white solid;
+    width: fit-content;
+    height: fit-content;
+}
+
+.bodyOscuro {
+    background-color: black;
+    color: white;
+
+}
+.botonOscuro {
+    background-color: var(--oscuro4);
+    color: white;
+    border: 1px white solid;
+    }
+.inputOscuro {
+    background-color:var(--oscuro1);
+    color: white;
+    
+}
+.inputOscuro::placeholder{
+    color:white    
+}
+ .operacionesOscuro {
+    border:1px solid white;
+    background-color: var(--oscuro2);
+} 

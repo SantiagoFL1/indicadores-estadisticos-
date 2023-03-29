@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="Controlador">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <link rel="stylesheet" href="./estilos.css">
+    </head>
+    <body>
+
+        <header id="header">
+            <h1 id="h1">Indicadores estadísticos para una muestra</h1>
+            <button ng-click="ModoOscuro()">Activar modo oscuro</button> 
+        </header>
+
+        <h3 id="h3">Cantidad de datos en la muestra:</h3> 
+        <form id="InputsTamaño">
+            <input ng-model="NumeroDatos" id="inputTabla" type="number" placeholder="Cantidad de datos">
+            <button ng-click="GenerarTabla()">Generar Tablas</button>
+        </form>
+        
+        <div id="ContenedorTablas">
+            <h3>Lista de datos</h3>
+            <div id="contenedorMuestra"></div>
+            <div id="operaciones">
+                <div class="operacion" style="grid-area: prom;">Promedio  <p>{{Media}}</p></div>          
+                <div class="operacion" style="grid-area: s;">Desvío estándar <p>{{Desvio}}</p></div>      
+                <div class="operacion" style="grid-area: s2;">Varianza <p>{{Varianza}}</p></div>            
+                
+            </div>
+            
+            <button ng-click="Calcular()">Calcular indicadores estadísticos</button>
+        </div>
+
+
+
+    </body>
+    <script src="./Estadistica.js"></script>
+</html>
