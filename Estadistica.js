@@ -50,6 +50,10 @@ app.controller('Controlador',['$scope',function($scope){
 
         ListaInputs.forEach(dato=>{
 
+            if (dato.value===''){
+                dato.value=0
+            }
+
             //SUMA PARA CALCULAR MEDIA
             Suma += parseFloat(dato.value)
             CantidadDatos++
